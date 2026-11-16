@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#100e1b">
+<meta name="description" content="Trade With Max Academy - Malayalam and English stock market education, chart fundamentals and financial risk awareness.">
+<title>Trade With Max Academy | Financial Education</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1822025515913668');
+fbq('track','PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1822025515913668&amp;ev=PageView&amp;noscript=1"
+alt="">
+</noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+:root{
+  --bg:#100e1b;
+  --panel:#1c1830;
+  --violet:#ad87ff;
+  --violet2:#8251e7;
+  --white:#f7f5ff;
+  --muted:#c2bcd2;
+  --line:#ffffff1d;
+}
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  width:100%;
+  height:100%;
+}
+body{
+  overflow:hidden;
+  background:var(--bg);
+  color:var(--white);
+  font-family:system-ui,-apple-system,
+    "Noto Sans Malayalam","Segoe UI",sans-serif;
+}
+.page{
+  width:100%;
+  height:100vh;
+  height:100svh;
+  height:100dvh;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  background:
+    radial-gradient(ellipse at 95% 5%,#7044bd44,transparent 45%),
+    radial-gradient(ellipse at 0% 95%,#5a3e9d25,transparent 43%),
+    var(--bg);
+}
+.shell{
+  width:100%;
+  max-width:470px;
+  height:100%;
+  min-height:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:clamp(3px,.6vh,9px);
+  overflow:hidden;
+  padding:
+    max(10px,env(safe-area-inset-top))
+    16px
+    max(10px,env(safe-area-inset-bottom));
+}
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  color:var(--violet);
+  font-size:clamp(9px,2.5vw,11px);
+  font-weight:850;
+  letter-spacing:.6px;
+}
+.top span:last-child{
+  border:1px solid #ad87ff60;
+  border-radius:30px;
+  padding:5px 10px;
+}
+.identity{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.logo{
+  width:clamp(62px,10vh,86px);
+  height:clamp(62px,10vh,86px);
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  border:3px solid var(--violet);
+  border-radius:50%;
+  background:linear-gradient(140deg,#55349a,#17132c);
+  box-shadow:0 0 0 4px #ad87ff15,0 0 24px #ad87ff35;
+}
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.logo span{
+  display:none;
+  color:#fff;
+  font-size:24px;
+  font-weight:950;
+}
+.brand h1{
+  margin:0;
+  font-size:clamp(18px,5.3vw,26px);
+  line-height:1.14;
+  font-weight:950;
+  letter-spacing:-.5px;
+}
+.brand h1 em{
+  font-style:normal;
+  color:var(--violet);
+}
+.brand p{
+  margin:5px 0 0;
+  color:var(--muted);
+  font-size:clamp(9px,2.5vw,11px);
+  font-weight:750;
+}
+.rule{
+  width:100%;
+  height:2px;
+  background:linear-gradient(90deg,var(--violet),#ad87ff00);
+}
+.hero{
+  padding:clamp(12px,2.5vh,22px) 12px;
+  border:1px solid #ad87ff35;
+  border-radius:16px;
+  background:linear-gradient(145deg,#30234a99,#1b172d99);
+  text-align:center;
+}
+.hero .tag{
+  display:inline-block;
+  padding:5px 11px;
+  border-radius:30px;
+  background:#ad87ff1a;
+  color:#cbb5ff;
+  font-size:clamp(9px,2.5vw,11px);
+  font-weight:900;
+}
+.hero h2{
+  margin:10px 0 0;
+  font-size:clamp(21px,6.2vw,31px);
+  line-height:1.35;
+  font-weight:950;
+}
+.hero h2 span{color:var(--violet)}
+.hero h3{
+  margin:7px 0 0;
+  font-size:clamp(12px,3.4vw,16px);
+}
+.hero p{
+  margin:9px auto 0;
+  max-width:390px;
+  color:var(--muted);
+  font-size:clamp(10px,2.8vw,12px);
+  line-height:1.55;
+}
+.section-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  color:var(--violet);
+  font-size:clamp(10px,2.8vw,12px);
+  font-weight:950;
+}
+.section-title span{
+  color:var(--muted);
+  font-size:10px;
+}
+.benefits{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+.benefit{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#ffffff09;
+}
+.num{
+  width:30px;
+  height:30px;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  border-radius:8px;
+  background:#ad87ff1c;
+  color:var(--violet);
+  font-size:13px;
+  font-weight:950;
+}
+.benefit b{
+  display:block;
+  font-size:clamp(10px,2.9vw,12px);
+  line-height:1.35;
+}
+.benefit small{
+  display:block;
+  margin-top:3px;
+  color:var(--muted);
+  font-size:clamp(9px,2.5vw,10px);
+  line-height:1.4;
+}
+.cta{
+  width:100%;
+  min-height:clamp(60px,9vh,77px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 5px;
+  border-radius:12px;
+  background:linear-gradient(110deg,#9c70ff,#d4bbff,#a47cff);
+  color:#1b1234;
+  text-decoration:none;
+  text-align:center;
+  white-space:nowrap;
+  font-size:clamp(13px,4.1vw,21px);
+  font-weight:950;
+  letter-spacing:-.45px;
+  box-shadow:0 0 24px #ad87ff55;
+  animation:glow 2.8s ease-in-out infinite;
+}
+@keyframes glow{
+  0%,100%{box-shadow:0 0 14px #ad87ff55}
+  50%{box-shadow:0 0 34px #ad87ff99}
+}
+.cta:focus-visible{
+  outline:3px solid #fff;
+  outline-offset:3px;
+}
+.timer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+}
+.count{
+  width:38px;
+  height:38px;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  border:2px solid #ad87ff75;
+  border-radius:50%;
+  background:#ad87ff12;
+  color:var(--violet);
+  font-size:17px;
+  font-weight:950;
+  font-variant-numeric:tabular-nums;
+}
+.timer-info b{
+  display:block;
+  font-size:clamp(10px,2.8vw,12px);
+}
+.timer-info span{
+  display:block;
+  margin-top:3px;
+  color:var(--muted);
+  font-size:10px;
+}
+.assurance{
+  margin:0;
+  color:#e3ddf1;
+  text-align:center;
+  font-size:clamp(10px,2.7vw,12px);
+}
+.disclaimer{
+  padding:9px 11px;
+  border-left:3px solid var(--violet);
+  border-radius:8px;
+  background:#ffffff0a;
+  color:#d2ccdf;
+  font-size:clamp(9px,2.35vw,10px);
+  line-height:1.4;
+}
+.disclaimer p{margin:0}
+.disclaimer p+p{margin-top:4px}
+.disclaimer strong{color:#cbb5ff}
+@media(max-height:760px){
+  .shell{padding:7px 13px;gap:3px}
+  .logo{width:50px;height:50px}
+  .brand h1{font-size:17px}
+  .brand p{margin-top:2px;font-size:9px}
+  .hero{padding:8px 10px}
+  .hero h2{font-size:20px;margin-top:5px}
+  .hero h3{font-size:11px;margin-top:3px}
+  .hero p{font-size:10px;margin-top:4px}
+  .benefits{gap:5px}
+  .benefit{padding:6px 9px}
+  .num{width:25px;height:25px}
+  .benefit b{font-size:10px}
+  .benefit small{font-size:9px;margin-top:2px}
+  .cta{min-height:52px}
+  .count{width:30px;height:30px;font-size:14px}
+  .disclaimer{padding:6px 8px;font-size:9px;line-height:1.3}
+}
+@media(max-height:600px){
+  .logo{width:40px;height:40px}
+  .brand h1{font-size:15px}
+  .brand p{font-size:8px}
+  .hero{padding:5px 8px}
+  .hero .tag{font-size:8px;padding:3px 8px}
+  .hero h2{font-size:17px}
+  .hero h3{font-size:10px}
+  .hero p{font-size:9px}
+  .section-title{font-size:9px}
+  .benefit{padding:4px 7px}
+  .num{width:20px;height:20px;font-size:10px}
+  .benefit b{font-size:9px}
+  .benefit small{font-size:8px}
+  .cta{min-height:44px}
+  .assurance{font-size:9px}
+  .disclaimer{font-size:8px;line-height:1.2}
+}
+@media(prefers-reduced-motion:reduce){
+  .cta{animation:none}
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+<main class="shell">
+
+  <div class="top">
+    <span>KERALA LEARNING COMMUNITY</span>
+    <span>FREE</span>
+  </div>
+
+  <header class="identity">
+    <div class="logo">
+      <img src="max.jpg" alt="Trade With Max Academy"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span aria-hidden="true">TM</span>
+    </div>
+
+    <div class="brand">
+      <h1>TRADE WITH<br><em>MAX ACADEMY</em></h1>
+      <p>ARUN K MURALI • MARKET EDUCATION</p>
+    </div>
+  </header>
+
+  <div class="rule"></div>
+
+  <section class="hero">
+    <span class="tag">FINANCIAL EDUCATION • മലയാളം + ENGLISH</span>
+
+    <h2>
+      വിപണിയെക്കുറിച്ച്<br>
+      <span>കൂടുതൽ മനസ്സിലാക്കാം</span>
+    </h2>
+
+    <h3>Explore Markets Through Learning</h3>
+
+    <p>
+      ഓഹരി വിപണിയുടെ അടിസ്ഥാന കാര്യങ്ങൾ,
+      ചാർട്ട് ആശയങ്ങൾ, സാമ്പത്തിക
+      അപകടസാധ്യതകൾ എന്നിവയെക്കുറിച്ചുള്ള
+      വിദ്യാഭ്യാസ വിവരങ്ങൾ.
+    </p>
+  </section>
+
+  <div class="section-title">
+    LEARNING TOPICS
+    <span>01 — 03</span>
+  </div>
+
+  <section class="benefits" aria-label="Learning topics">
+
+    <div class="benefit">
+      <span class="num">01</span>
+      <div>
+        <b>Market Fundamentals</b>
+        <small>ഓഹരികളും വിപണി സൂചികകളും പരിചയപ്പെടാം</small>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <span class="num">02</span>
+      <div>
+        <b>Chart Reading Basics</b>
+        <small>ചാർട്ടുകളും വിലയിലെ മാറ്റങ്ങളും മനസ്സിലാക്കാം</small>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <span class="num">03</span>
+      <div>
+        <b>Risk Awareness &amp; Financial Literacy</b>
+        <small>സാമ്പത്തിക അപകടസാധ്യതകളെക്കുറിച്ച് പഠിക്കാം</small>
+      </div>
+    </div>
+
+  </section>
+
+  <a class="cta" id="joinBtn"
+    href="https://t.me/+_Iq1sLpfjfs3YmM1">
+    JOIN FREE TELEGRAM CHANNEL
+  </a>
+
+  <div class="timer">
+    <span class="count" id="seconds">10</span>
+    <div class="timer-info" id="timerText">
+      <b>Opening Learning Community</b>
+      <span>10 സെക്കൻഡിനുള്ളിൽ ചാനൽ തുറക്കും</span>
+    </div>
+  </div>
+
+  <p class="assurance">
+    Free to Join • Educational Content • Leave Anytime
+  </p>
+
+  <section class="disclaimer">
+    <p>
+      <strong>Disclaimer:</strong>
+      General educational information only.
+      Not investment advice or buy/sell recommendations.
+      Trading and investing involve financial risk,
+      including potential loss of capital.
+      No returns are guaranteed.
+    </p>
+    <p>
+      <strong>മലയാളം:</strong>
+      ഈ വിവരങ്ങൾ വിദ്യാഭ്യാസ ആവശ്യങ്ങൾക്ക് മാത്രം.
+      ട്രേഡിംഗിലും നിക്ഷേപത്തിലും സാമ്പത്തിക നഷ്ടസാധ്യതയുണ്ട്.
+    </p>
+  </section>
+
+</main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  const destination="https://t.me/+_Iq1sLpfjfs3YmM1";
+  const button=document.getElementById("joinBtn");
+  const seconds=document.getElementById("seconds");
+  const timerText=document.getElementById("timerText");
+
+  let stopped=false;
+  let interval=null;
+  const deadline=performance.now()+10000;
+
+  function stopTimer(){
+    stopped=true;
+    if(interval!==null){
+      clearInterval(interval);
+      interval=null;
+    }
+  }
+
+  function updateCountdown(){
+    if(stopped)return;
+
+    const remaining=Math.max(
+      0,
+      Math.ceil((deadline-performance.now())/1000)
+    );
+
+    seconds.textContent=remaining;
+
+    if(remaining===0){
+      stopTimer();
+      timerText.textContent="Opening Telegram Channel...";
+      window.location.assign(destination);
+    }
+  }
+
+  button.addEventListener("click",function(event){
+    if(event.defaultPrevented)return;
+
+    if(
+      event.ctrlKey||event.metaKey||
+      event.shiftKey||event.altKey||
+      (event.button!==0&&event.detail!==0)
+    ){
+      return;
+    }
+
+    stopTimer();
+
+    try{
+      if(typeof fbq==="function"){
+        fbq("track","Subscribe");
+      }
+    }catch(error){}
+  });
+
+  interval=setInterval(updateCountdown,200);
+  updateCountdown();
+
+  window.addEventListener("pagehide",stopTimer);
+})();
+</script>
+</body>
+</html>
